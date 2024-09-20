@@ -10,14 +10,19 @@ to calculate what percentage you need in the A2 to pass and to get a distinction
    git clone https://github.com/your-username/final-mark-calculator.git
 
 2. Navigate to the project directory:
+
+   ```
    cd final-mark-calculator
+   ```
 
 3. Install the required dependencies:
-   pip install pandas streamlit st-annotated-text
-
+   ```
+   pip install requirements.txt
+   ```
 4. Run the Streamlit app:
+   ```
    streamlit run fm_calculator.py
-
+   ```
 5. Access the app in your browser at http://localhost:8501.
 
 ## File Structure
