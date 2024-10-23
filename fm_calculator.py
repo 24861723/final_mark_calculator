@@ -33,6 +33,26 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+##### google form link
+
+# Function to toggle the visibility of the sidebar
+def toggle_sidebar():
+    if 'sidebar_visible' not in st.session_state:
+        st.session_state.sidebar_visible = True
+
+
+# Sidebar for feedback form
+if st.session_state.get('sidebar_visible', False):
+    with st.sidebar:
+        st.header("Feedback Form")
+        feedback_form_url = "https://docs.google.com/forms/d/e/1FAIpQLSe0yf7dPDmsvSlL27nQTtbxjXdcCRe6QN-3BUGSVO3LgO5TFA/viewform?usp=sf_link"  # Replace with your Google Form URL
+        if st.button("Provide Feedback"):
+            js = f"window.open('{feedback_form_url}', '_blank')"
+            html = f"<script>{js}</script>"
+            st.markdown(html, unsafe_allow_html=True)
+
+
+
 # App Title
 st.title("Final Mark Calculator")
 st.markdown("---")
